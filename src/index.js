@@ -23,7 +23,7 @@ export function getLocalItem(localStorageName) {
 
 export function removeLocalItem(localStorageName) {
   // REMOVE ITEM FROM COOKIE
-  remove(localStorageName, options)
+  remove(localStorageName, {path: '/'})
 }
 
 export function removeAllLocalItem(storageName) {
