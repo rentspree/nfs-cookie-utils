@@ -1,9 +1,7 @@
 import {load, save, remove} from './cookie-lib';
 import _ from 'lodash'
 
-let options = {
-  path: '/'
-}
+let options = {}
 
 export function setOption(op = {}) {
   options = _.merge(options, op)
@@ -26,7 +24,6 @@ export function getLocalItem(localStorageName) {
 export function removeLocalItem(localStorageName) {
   // REMOVE ITEM FROM COOKIE
   remove(localStorageName, options)
-  remove(localStorageName)
 }
 
 export function removeAllLocalItem(storageName) {
